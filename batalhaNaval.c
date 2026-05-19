@@ -14,6 +14,14 @@ int main() {
     int coluna[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int i, j;
 
+    for (i = 0; i < 3; i++) {
+        tabuleiro[2][3 + i] = 3;
+    }
+
+    for (i = 0; i < 3; i++) {
+        tabuleiro[5 + i][7] = 3;
+    }
+
     printf("=== TABULEIRO DA BATALHA NAVAL ===\n");
     printf("   ");
     for (i = 0; i < 10; i++) {
@@ -29,7 +37,6 @@ int main() {
             printf("%d ", tabuleiro[i][j]);
         }
         
-
         printf("\n");
     }
     
