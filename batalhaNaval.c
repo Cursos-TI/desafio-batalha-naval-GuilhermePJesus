@@ -15,11 +15,15 @@ int main() {
     int i, j;
 
     for (i = 0; i < 3; i++) {
-        tabuleiro[2][3 + i] = 3;
+        tabuleiro[2][3 + i] = 2;
     }
 
     for (i = 0; i < 3; i++) {
-        tabuleiro[5 + i][7] = 3;
+        tabuleiro[7 + i][7] = 4;
+    }
+
+    for (i = 0; i < 3; i++) {
+        tabuleiro[3 - i][2 - i] = 6;
     }
 
     printf("=== TABULEIRO DA BATALHA NAVAL ===\n");
