@@ -16,20 +16,35 @@ int main() {
     int coluna[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int i, j;
 
-    for (i = 0; i < 3; i++) {
-        tabuleiro[2][3 + i] = 2;
+    // Cone
+    for (i = 0; i < 3; i++) { // Horizontal
+        tabuleiro[3][5 + i] = 1;
     }
 
-    for (i = 0; i < 3; i++) {
-        tabuleiro[7 + i][7] = 4;
+    for (i = 0; i < 3; i++) { // Vertical
+        tabuleiro[2 + i][6] = 1;
     }
 
-    for (i = 0; i < 3; i++) {
-        tabuleiro[3 - i][2 - i] = 6;
+    for (i = 0; i < 5; i++) { // Horizontal
+        tabuleiro[4][4 + i] = 1;
     }
 
-    for (i = 0; i < 3; i++) {
-        tabuleiro[7 - i][9 - i] = 8;
+    // Octaedro
+    for (i = 0; i < 3; i++) { // Horizontal
+        tabuleiro[2][1 + i] = 2;
+    }
+
+    for (i = 0; i < 3; i++) { // Vertical
+        tabuleiro[1 + i][2] = 2;
+    }
+
+    // Cruz
+    for (i = 0; i < 5; i++) { // Horizontal
+        tabuleiro[7][1 + i] = 3;
+    }
+
+    for (i = 0; i < 3; i++) { // Vertical
+        tabuleiro[6 + i][3] = 3;
     }
     
     printf("=== TABULEIRO DA BATALHA NAVAL ===\n");
